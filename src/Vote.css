@@ -1,0 +1,20 @@
+.stars > .star {
+    display: inline-block;
+}
+
+.star {
+    color: royalblue;
+    font-size: 2em;
+}
+
+.stars > .active:before,
+
+.stars:hover > .star:before {
+    content: "★";  /*changer le contenu*/
+    position: absolute;  /*figer la position au dessus de l'existante*/
+    cursor: pointer; /*modifier le curseur*/
+}
+
+.stars > .star:hover ~ .star:before {
+    content: '';  /*au survol des etoile et a partir de la position actuelle selectionner toutes les precedentes avec "~"*/
+}
